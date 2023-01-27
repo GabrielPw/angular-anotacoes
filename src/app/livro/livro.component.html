@@ -1,0 +1,26 @@
+
+<div class="bg bg-dark">
+    <img height="250vh" class="rounded mx-auto d-block bg-opacity-10" src="https://images.pexels.com/photos/762687/pexels-photo-762687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+</div>
+<div>
+    
+    <br>
+    <mat-toolbar color="primary">
+        <span>Listagem de Livros</span>
+    </mat-toolbar>
+    <table mat-table [dataSource]="livros">
+        
+        <ng-container matColumnDef="titulo">
+            <th mat-header-cell *matHeaderCellDef> Titulo </th>
+            <td mat-cell *matCellDef="let livro"> {{livro.titulo}} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="autor">
+            <th mat-header-cell *matHeaderCellDef> Autor </th>
+            <td mat-cell *matCellDef="let livro"> {{livro.autor}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>
