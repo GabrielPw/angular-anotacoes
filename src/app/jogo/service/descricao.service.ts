@@ -1,11 +1,11 @@
-import { Jogo } from './../jogo';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Descricao } from '../descricao';
 
 @Injectable({
   providedIn: 'root'
 })
-export class JogoService {
+export class DescricaoService {
 
   constructor(private http: HttpClient) { }
 
@@ -13,7 +13,6 @@ export class JogoService {
 
     let url = 'http://localhost:8080/' + endpoint;
     console.log("url passado: " + url);
-    return this.http.get<Jogo>(url);
+    return this.http.get<Descricao[]>(url);
   }
 }
-

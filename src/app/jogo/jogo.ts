@@ -4,6 +4,7 @@ export class Jogo{
     id:number;
     nome: string;
     plataformas: string[];
+    descricoes?: string[];
     finalizado?: boolean;
 
     constructor(id:number, nome:string, plataformas:string[]){

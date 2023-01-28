@@ -22,9 +22,10 @@ export class JogoComponent {
 
   constructor(private jogo: JogoService){
 
-    this.jogo.getData().subscribe(data=>{
+    this.jogo.getData("jogo/all").subscribe(data=>{
       console.warn(data);
       this.jogosApi = data;
     });
+
   }
 }

@@ -1,3 +1,25 @@
-<p>jogo-detail works!</p>
 
-<button routerLink="/">Go back to homePage</button>
+<br>
+<h1>{{nome}}</h1>
+
+<button mat-stroked-button color="primary"> + Criar uma anotação</button>
+
+<br>
+<br>
+<mat-card *ngFor="let descricao of descricoes" class="card-anotacao">
+    <br>
+    <div class="d-flex justify-content-start">
+        <div class="row">
+            <p class="text-center font-weight-light">28/01/2023</p>
+            <img height="190px" class="img img-rounded" src="https://imgs.search.brave.com/LRmRop2d_z1YLlA7tQS2ppct9ium5D5nzGF4vDl7b6Q/rs:fit:180:180:1/g:ce/aHR0cHM6Ly9hdmF0/YXJmaWxlcy5hbHBo/YWNvZGVycy5jb20v/MTY2L3RodW1iLTE2/Njk5MS5wbmc" alt="">
+        </div>
+        <div class="d-flex justify-content-between">
+            <mat-card-content><p style="font-size: 20px; font-weight: 100;">{{descricao.descricao}}</p></mat-card-content>
+        </div>
+        
+    </div>
+    
+</mat-card>
+<br>
+
+<button mat-stroked-button color="primary" routerLink="/">Voltar para a Homepage</button>
