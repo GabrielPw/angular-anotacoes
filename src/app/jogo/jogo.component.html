@@ -4,14 +4,17 @@
 </div>
 
 <br>
-<mat-toolbar color="primary">
-    <span>Meus Jogos</span>
-</mat-toolbar>
-<table mat-table [dataSource]="jogos">
+<div class="d-flex justify-content-between">
+    <h2>Minha Lista de Jogos (API) </h2>
+    <button mat-stroked-button color="primary">+ Novo jogo </button>
+</div>
+
+
+<table mat-table [dataSource]="jogosApi">
     
     <ng-container matColumnDef="nome">
         <th mat-header-cell *matHeaderCellDef> Nome </th>
-        <td mat-cell *matCellDef="let jogo"> {{jogo.nome}} </td>
+        <td mat-cell *matCellDef="let jogo"> <a routerLink="/jogos/{{jogo.id}}" style="text-decoration: none; "> {{jogo.nome}} </a></td>
     </ng-container>
     <ng-container matColumnDef="plataformas">
         <th mat-header-cell *matHeaderCellDef> Plataformas </th>
