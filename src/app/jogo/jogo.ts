@@ -4,7 +4,10 @@ export class Jogo{
     id:number;
     nome: string;
     plataformas: string[];
-    descricoes?: string[];
+    resumo?: string = '';
+    desenvolvedor?: string = '';
+    urlMainPhoto?: string = '';
+    anoLancamento?: string = '';
     finalizado?: boolean;
 
     constructor(id:number, nome:string, plataformas:string[]){

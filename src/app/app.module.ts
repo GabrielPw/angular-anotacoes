@@ -12,10 +12,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CardAnotacaoComponent } from './card-anotacao/card-anotacao.component';
 import { JogoDetailComponent } from './jogo-detail/jogo-detail.component';
 import { JogoComponent } from './jogo/jogo.component';
 import { LivroComponent } from './livro/livro.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import {MatSelectModule} from '@angular/material/select';
+
+
 
 @NgModule({
   declarations: [
@@ -23,7 +27,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     JogoComponent,
     LivroComponent,
     NotFoundComponent,
-    JogoDetailComponent
+    JogoDetailComponent,
+    CardAnotacaoComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +39,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     MatCheckboxModule,
     MatCardModule,
     MatTableModule,
+    MatSelectModule,
     MatToolbarModule,
     MatButtonModule,
     HttpClientModule

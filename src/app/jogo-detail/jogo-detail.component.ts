@@ -12,7 +12,9 @@ import { JogoService } from '../jogo/service/jogo.service';
 })
 export class JogoDetailComponent implements OnInit{
 
+  displayedColumns = [''];
   isFormHidden : boolean = true;
+
   id:string = '';
   jogoRecebido:any = [];
 
