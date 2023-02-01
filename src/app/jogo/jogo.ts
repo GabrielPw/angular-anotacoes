@@ -10,11 +10,12 @@ export class Jogo{
     anoLancamento?: string = '';
     finalizado?: boolean;
 
-    constructor(id:number, nome:string, plataformas:string[]){
+    constructor(id:number, nome:string, plataformas:string[], finalizado?:boolean, desenvolvedor?:string){
 
         this.id = id;
         this.nome = nome;
         this.plataformas = plataformas;
+        this.desenvolvedor = desenvolvedor;
         this.finalizado = false;
     }
 }

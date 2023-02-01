@@ -1,0 +1,35 @@
+
+<h2>Novo Jogo</h2>
+<form #jogoForm="ngForm" (ngSubmit)="salvarJogo(jogoForm.value)">
+    <div class="form-group">
+      <input type="text" name="nome" ngModel class="form-control" autocomplete="off" id="input_titulo" placeholder="Titulo do jogo">
+    </div>
+    <div class="form-group" style="margin-top: 20px;">
+      <input type="text" name="desenvolvedor" [(ngModel)]="desenvolvedor" ngModel class="form-control" autocomplete="off" id="input_desenvolvedor" placeholder="Desenvolvedor">
+    </div>
+    <div class="form-group" style="margin-top: 20px;">
+      <label for="lblPlataformas"><b>Plataformas</b></label>
+      <section class="example-section">
+        <span class="example-list-section">
+          <mat-checkbox *ngFor="let plataforma of plataformas"  [checked]="plataforma.isChecked" (click)="exibeSelecionados(plataforma.titulo)">{{plataforma.titulo}}</mat-checkbox>
+        </span>
+      
+      </section>
+    </div>
+    
+    <div *ngFor="let plataforma of plataformas" class="d-inline-flex" style="margin-bottom: 20px;">
+
+      <mat-card *ngIf="plataforma.isChecked" class="custom">
+        <mat-card-content>{{plataforma.titulo}}</mat-card-content>
+      </mat-card>
+    </div>
+    <br>
+    <span class="example-list-section">
+      <mat-checkbox name="finalizado" [(ngModel)]="terminou">Finalizado </mat-checkbox>
+    </span>
+    
+
+    <br>
+    <button type="submit" mat-raised-button color="primary">Criar +</button>
+    <p routerLink="/" class="btn btn-secondary m-3">Voltar para Homepage</p>
+  </form>

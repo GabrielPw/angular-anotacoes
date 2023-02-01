@@ -6,11 +6,10 @@
 <br>
 <div class="d-flex justify-content-between">
     <h2>Minha Lista de Jogos (API) </h2>
-    <button mat-stroked-button color="primary">+ Novo jogo </button>
+    <button routerLink="/jogo-new" mat-stroked-button color="primary">+ Novo jogo </button>
 </div>
 
 <!-- Form para add novo Jogo -->
-
 
 <table mat-table [dataSource]="jogosApi">
     

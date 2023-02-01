@@ -10,9 +10,9 @@
 <div class="border rounded p-2">
     <h2>Resumo</h2>
     <div style="float: left; margin: 10px;">
-        <img src="{{jogoRecebido.urlMainPhoto}}" width="350px" height="350px" class="pull-left rounded mx-auto d-block media-left" alt="">
+        <img src="{{jogoRecebido.urlMainPhoto}}" width="250px" height="250px" class="pull-left rounded mx-auto d-block media-left" style="padding: 5px;" alt="">
      </div>   
-    <p class="media-body" style="padding: 10px; font-size: 20px; font-weight: 100; line-height: 30px;">{{jogoRecebido.resumo}}</p>
+    <p class="media-body" style="padding: 10px; font-size: 16px; font-weight: 100; line-height: 30px;">{{jogoRecebido.resumo}}</p>
     
 
     <p style="padding-top: 10px; font-size: 20px; font-weight: 100; line-height: 30px; clear:both;"> <b>Data de Lançamento:</b> {{jogoRecebido.anoLancamento}}</p>
@@ -21,19 +21,9 @@
 
 <br>
 <br>
-<mat-card *ngFor="let descricao of descricoes" class="card-anotacao">
-    <br>
-    <div class="d-flex justify-content-start">
-        <div class="row" style="width: 200px;">
-            <p class="text-center font-weight-light">28/01/2023</p>
-            <img class="rounded mx-auto d-block" style="padding: 20px;" src="https://imgs.search.brave.com/7Lqd1y9SLyF7hePaN_r0r4E0ot9AVx7f-5sqWWfdmbo/rs:fit:300:198:1/g:ce/aHR0cDovL3R1ZG9z/b2JyZWNhY2hvcnJv/cy5jb20uYnIvd3At/Y29udGVudC91cGxv/YWRzLzIwMTMvMDkv/YXNwYXMucG5n" alt="">
-        </div>
-        <div class="d-flex justify-content-between">
-            <mat-card-content><p style="font-size: 20px; font-weight: 100;">{{descricao.descricao}}</p></mat-card-content>
-        </div>
-    </div>
-    
-</mat-card>
+
+<app-card-anotacao></app-card-anotacao>
+
 <br>
 
 <button mat-stroked-button color="primary" routerLink="/">Voltar para a Homepage</button>

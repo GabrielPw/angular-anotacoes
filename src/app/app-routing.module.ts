@@ -1,3 +1,4 @@
+import { JogoNewComponent } from './jogo/jogo-new/jogo-new.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'jogos', component: JogoComponent},
   {path: 'livros', component: LivroComponent},
   {path: 'jogos/:id', component: JogoDetailComponent},
+  {path: 'jogo-new', component: JogoNewComponent},
   {path:'**', component: NotFoundComponent}
 ];
 
